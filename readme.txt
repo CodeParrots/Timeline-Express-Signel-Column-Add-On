@@ -11,7 +11,7 @@ Enable a 'single-column' parameter in Timeline Express to display timelines in a
 
 == Description ==
 
-[Timeline Express - Single Column Add-On](https://wordpress.org/plugins/timeline-express-single-column-add-on/) extends Timeline Express, and enables a new shortcode parameter `single-column`.
+Timeline Express - Single Column Add-On extends Timeline Express, and enables a new shortcode parameter `single-column`.
 
 When set to 1 (eg: `[timeline-express single-column="1"]`), the timeline will display in a single column - similar to the default Timeline Express mobile view.
 
