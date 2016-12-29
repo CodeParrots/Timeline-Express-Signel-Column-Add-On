@@ -1,0 +1,80 @@
+/**
+ * Public facing styles for Single Column Timeline Express Display
+ * @since 1.0
+ */
+#cd-timeline.single-column::before {
+	left: 0;
+}
+
+/** Announcement Containers **/
+.cd-timeline-block.single-column {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+/** 2nd Announcement Container **/
+.cd-timeline-block.single-column:nth-child(2) {
+	margin-top: 1em !important;
+}
+
+.timeline-express.single-column .cd-timeline-block:nth-child(1) {
+	margin-top: 0;
+}
+
+.timeline-express.single-column .cd-timeline-block {
+	margin: 1em 0;
+}
+
+/** Icon Contianer */
+.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-icon-link,
+.cd-timeline-block.single-column.timeline-announcement-right .cd-timeline-icon-link {
+	left: 0;
+}
+
+/** Icon Link Container **/
+.cd-timeline-block.single-column .cd-timeline-icon-link {
+	box-shadow: none !important;
+}
+
+/** Announcement Content Container **/
+.cd-timeline-block.single-column .cd-timeline-content {
+	width: 89%;
+	margin-left: 11%;
+	float: none;
+}
+
+/** Announcement Content Container - Arrow which points at the icon **/
+.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-content::before {
+	border-left-color: transparent;
+}
+
+/** Announcement Content Container - Arrow which points at the icon **/
+.cd-timeline-block.single-column .cd-timeline-content::before {
+	left: auto;
+	border-left-color: transparent;
+}
+
+/** Fix Icon Contianer Alignment **/
+.cd-timeline-block.single-column .cd-timeline-icon-link,
+.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-img {
+	margin-left: 0 !important;
+}
+
+.cd-timeline-block.single-column .cd-timeline-img {
+	left: -2em;
+	margin-left: 0;
+}
+
+/**
+ * New Layout Styles
+ */
+.cd-timeline-block.single-column .cd-timeline-title-container + .announcement-banner-image {
+	display:none
+}
+
+.cd-timeline-block.single-column .the-excerpt .announcement-banner-image {
+	float: left;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRpbWVsaW5lLWV4cHJlc3Mtc2luZ2xlLWNvbHVtbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7OztHQUdHO0FBQ0g7Q0FDQyxRQUFBO0NBQ0E7O0FBRUQsK0JBQUE7QUFDQTtDQUNDLFlBQUE7Q0FDQSxtQkFBbUI7Q0FDcEI7O0FBRUEsa0NBQWtDO0FBQ2xDO0NBQ0MsMkJBQUE7Q0FDQTs7QUFFRDtDQUNBLGNBQUE7Q0FDQzs7QUFFRDtDQUNDLGNBQWM7Q0FDZjs7QUFFQSxxQkFBQztBQUNEOztDQUVBLFFBQUE7Q0FDQTs7QUFFQSwyQkFBQztBQUNEO0NBQ0EsNEJBQUE7Q0FDQTs7QUFFQSxzQ0FBQztBQUNEO0NBQ0EsV0FBQTtDQUNBLGlCQUFBO0NBQ0MsWUFBWTtDQUNiOztBQUVBLHVFQUFnQztBQUNoQztDQUNDLCtCQUErQjtDQUNoQzs7QUFFQSx1RUFBUztBQUNUO0NBQ0MsV0FBQTtDQUNBLCtCQUErQjtDQUNoQzs7QUFFQSxvQ0FBb0M7QUFDcEM7O0NBRUMsMEJBQUE7Q0FDQSxRQUFRO0NBQ1Q7O0FBRUE7Q0FDQyxXQUFBO0NBQ0EsZUFBZTtDQUNoQjs7QUFFQTs7R0FFQTtBQUNBO0NBQ0MsWUFBRTtDQUNIOztBQUVBO0NBQ0MsWUFBWTtDQUNiLG1CQUFBO0NBQ0MsZ0JBQVk7Q0FDWiIsImZpbGUiOiJ0aW1lbGluZS1leHByZXNzLXNpbmdsZS1jb2x1bW4uY3NzIn0= */
