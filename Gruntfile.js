@@ -14,7 +14,6 @@ module.exports = function(grunt) {
 
 		pkg: pkg,
 
-		// js minification
 		uglify: {
 			scripts: {
 				expand: true,
@@ -238,14 +237,14 @@ module.exports = function(grunt) {
 	] );
 
 	grunt.registerTask( 'Development tasks.', [
-			'sass',
-			'autoprefixer',
-			'uglify',
-			'cssmin',
-			'usebanner',
-			'watch'
-		]
-	);
+		'sass',
+		'replace',
+		'autoprefixer',
+		'uglify',
+		'cssmin',
+		'usebanner',
+		'watch'
+	] );
 
 	grunt.registerTask( 'Generate readme.', [
 		'wp_readme_to_markdown'
@@ -260,7 +259,7 @@ module.exports = function(grunt) {
 	] );
 
 	grunt.registerTask( 'Deploy to WordPres.org.', [
-		'copy',
+		'Build the plugin.',
 		'wp_deploy'
 	] );
 
