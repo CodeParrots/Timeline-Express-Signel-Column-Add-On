@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
 
-	grunt.initConfig({
+	grunt.initConfig( {
 
 		pkg: pkg,
 
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 		watch: {
 			public_css: {
 				files: 'lib/css/*.css',
-				tasks: [ 'sass', 'autoprefixer', 'cssmin' ],
+				tasks: [ 'autoprefixer', 'cssmin', 'usebanner' ],
 				options: {
 					spawn: false,
 					event: [ 'all' ]
