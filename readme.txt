@@ -3,8 +3,8 @@ Contributors: eherman24, codeparrots
 Tags: timeline, express, addon, add, on, single, column, shortcode, parameter, time, line, timeline express
 Plugin URI: https://www.wp-timelineexpress.com
 Requires at least: WP 4.0 & Timeline Express 1.2.8.1
-Tested up to: 4.7
-Stable tag: 1.0.4
+Tested up to: 4.8
+Stable tag: 1.1.0
 License: GPLv2 or later
 
 Enable a 'single-column' parameter in Timeline Express to display timelines in a single column.

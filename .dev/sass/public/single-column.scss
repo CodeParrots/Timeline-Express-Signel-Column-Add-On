@@ -1,0 +1,76 @@
+/**
+ * Public facing styles for Single Column Timeline Express Display
+ * @since 1.0
+ */
+#cd-timeline.single-column::before {
+	left: 0;
+}
+
+/** Announcement Containers **/
+.cd-timeline-block.single-column {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+/** 2nd Announcement Container **/
+.cd-timeline-block.single-column:nth-child(2) {
+	margin-top: 1em !important;
+}
+
+.timeline-express.single-column .cd-timeline-block:nth-child(1) {
+	margin-top: 0;
+}
+
+.timeline-express.single-column .cd-timeline-block {
+	margin: 1em 0;
+}
+
+/** Icon Contianer */
+.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-icon-link,
+.cd-timeline-block.single-column.timeline-announcement-right .cd-timeline-icon-link {
+	left: 0;
+}
+
+/** Icon Link Container **/
+.cd-timeline-block.single-column .cd-timeline-icon-link {
+	box-shadow: none !important;
+}
+
+/** Announcement Content Container **/
+.cd-timeline-block.single-column .cd-timeline-content {
+	width: 89%;
+	margin-left: 11%;
+	float: none;
+}
+
+/** Announcement Content Container - Arrow which points at the icon **/
+.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-content::before {
+	border-left-color: transparent;
+}
+
+/** Announcement Content Container - Arrow which points at the icon **/
+.cd-timeline-block.single-column .cd-timeline-content::before {
+	left: auto;
+	border-left-color: transparent;
+}
+
+/** Fix Icon Contianer Alignment **/
+.cd-timeline-block.single-column .cd-timeline-icon-link,
+.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-img {
+	margin-left: 0 !important;
+}
+
+.cd-timeline-block.single-column .cd-timeline-img {
+	left: -2em;
+	margin-left: 0;
+}
+
+.cd-timeline-block.single-column .the-excerpt .announcement-banner-image {
+	float: left;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+/**
+ * Individual Style Tweaks (Pro v2.0.0+)
+ */

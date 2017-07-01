@@ -1,0 +1,8 @@
+/*
+ * @Plugin Timeline Express - Single Column Add-on
+ * @Author Code Parrots
+ * @Site http://www.wp-timelineexpress.com
+ * @Version 1.1.0
+ * @Build 07-01-2017
+ */
+@charset "UTF-8";#cd-timeline.single-column::before,.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-icon-link,.cd-timeline-block.single-column.timeline-announcement-right .cd-timeline-icon-link{left:0}.cd-timeline-block.single-column{width:100%;margin-bottom:1em}.cd-timeline-block.single-column:nth-child(2){margin-top:1em!important}.timeline-express.single-column .cd-timeline-block:nth-child(1){margin-top:0}.timeline-express.single-column .cd-timeline-block{margin:1em 0}.cd-timeline-block.single-column .cd-timeline-icon-link{-webkit-box-shadow:none!important;box-shadow:none!important}.cd-timeline-block.single-column .cd-timeline-content{width:89%;margin-left:11%;float:none}.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-content::before{border-left-color:transparent}.cd-timeline-block.single-column .cd-timeline-content::before{left:auto;border-left-color:transparent}.cd-timeline-block.single-column .cd-timeline-icon-link,.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-img{margin-left:0!important}.cd-timeline-block.single-column .cd-timeline-img{left:-2em;margin-left:0}.cd-timeline-block.single-column .the-excerpt .announcement-banner-image{float:left;margin-right:10px;margin-top:5px}#cd-timeline.single-column .icon-rotated-square .cd-timeline-img{left:-23px}#cd-timeline.single-column .icon-small-dot .cd-timeline-img{left:-13px}#cd-timeline.single-column .icon-square .cd-timeline-img{left:-25px!important}
