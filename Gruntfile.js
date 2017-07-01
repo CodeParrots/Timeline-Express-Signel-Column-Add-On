@@ -95,7 +95,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			public_css: {
-				files: 'lib/css/*.css',
+				files: [ 'lib/css/*.css', '! lib/css/*.min.css' ],
 				tasks: [ 'autoprefixer', 'cssmin', 'usebanner' ],
 				options: {
 					spawn: false,
@@ -103,7 +103,7 @@ module.exports = function(grunt) {
 				},
 			},
 			public_js: {
-				files: 'lib/js/*.js',
+				files: [ 'lib/js/*.js', '!lib/js/*.min.js' ],
 				tasks: [ 'uglify', 'usebanner' ],
 				options: {
 					spawn: false,
