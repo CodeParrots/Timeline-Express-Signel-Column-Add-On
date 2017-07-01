@@ -138,7 +138,7 @@ module.exports = function(grunt) {
 				src: [ 'README.md' ],
 				overwrite: true,
 				replacements: [ {
-					from: /# <%= pkg.title %> v(.*)/,
+					from: /# (.*?) v(.*)/,
 					to: "# <%= pkg.title %> v<%= pkg.version %>"
 				} ]
 			},
@@ -199,6 +199,34 @@ module.exports = function(grunt) {
 					max_buffer: 1024*1024*10
 				}
 			}
+		},
+
+		wp_readme_to_markdown: {
+			options: {
+				post_convert: function( readme ) {
+
+					var matches = readme.match( /\*\*Tags:\*\*(.*)\r?\n/ ),
+					    tags    = matches[1].trim().split( ', ' ),
+					    section = matches[0];
+
+					for ( var i = 0; i < tags.length; i++ ) {
+
+						section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
+
+					}
+
+					// Tag links
+					readme = readme.replace( matches[0], section );
+
+					return readme;
+
+				}
+			},
+			main: {
+				files: {
+					'readme.md': 'readme.txt'
+				}
+			}
 		}
 
 	} );
@@ -219,19 +247,25 @@ module.exports = function(grunt) {
 		]
 	);
 
-	// package release
+	grunt.registerTask( 'Generate readme.', [
+		'wp_readme_to_markdown'
+	] );
+
 	grunt.registerTask( 'Build the plugin.', [
-			'replace',
-			'clean:pre_build',
-			'copy',
-			'compress'
-		]
-	);
+		'replace',
+		'wp_readme_to_markdown',
+		'clean:pre_build',
+		'copy',
+		'compress'
+	] );
 
 	grunt.registerTask( 'Deploy to WordPres.org.', [
-			'copy',
-			'wp_deploy'
-		]
-	);
+		'copy',
+		'wp_deploy'
+	] );
+
+	grunt.registerTask( 'Replace versions.', [
+		'replace'
+	] );
 
 };

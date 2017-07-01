@@ -1,6 +1,6 @@
 {
   "name": "timeline-express-single-column-add-on",
-  "title": "Timeline Express - Single Column Add-on",
+  "title": "Timeline Express - Single Column Add-On",
   "version": "1.1.0",
   "description": "Define new shortcode parameter, and limit timelines to a single column.",
   "main": "index.js",
@@ -27,6 +27,7 @@
     "grunt-text-replace": "^0.4.0",
     "matchdep": "^1.0.1",
     "grunt-wp-deploy": "^1.2.1",
-    "grunt-menu": "^1.0.2"
+    "grunt-menu": "^1.0.2",
+    "grunt-wp-readme-to-markdown": "^2.0.1"
   }
 }
