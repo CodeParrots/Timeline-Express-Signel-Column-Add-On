@@ -28,6 +28,7 @@ If you want to set a timeline to single column you can add the 'single-column' p
 * Updates to the styles for Timeline Express Pro v2 compatibility.
 * Updates to the shortcode generator fields.
 * Updates to the automation tasks.
+* Reverted container styles back to the original, to maintain consistency.
 
 = 1.0.4 - October 20th, 2016 =
 * Tweak front end styles.

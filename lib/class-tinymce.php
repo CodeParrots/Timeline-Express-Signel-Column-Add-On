@@ -19,6 +19,12 @@ final class Timeline_Express_Single_Column_TinyMCE {
 	 */
 	public function generate_fields() {
 
+		if ( ! function_exists( 'timeline_express_shortcode_generator_field' ) ) {
+
+			return;
+
+		}
+
 		$single_column_fields = [
 			[
 				'attribute' => 'single-column', // used by our helper function only.

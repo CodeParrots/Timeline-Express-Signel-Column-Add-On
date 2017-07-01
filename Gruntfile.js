@@ -137,8 +137,8 @@ module.exports = function(grunt) {
 				src: [ 'README.md' ],
 				overwrite: true,
 				replacements: [ {
-					from: /# (.*?) v(.*)/,
-					to: "# <%= pkg.title %> v<%= pkg.version %>"
+					from: /# (.*?) #/,
+					to: "# <%= pkg.title %> v<%= pkg.version %> #"
 				} ]
 			},
 			charset: {
@@ -240,19 +240,15 @@ module.exports = function(grunt) {
 		'sass',
 		'replace',
 		'autoprefixer',
-		'uglify',
 		'cssmin',
+		'uglify',
 		'usebanner',
-		'watch'
-	] );
-
-	grunt.registerTask( 'Generate readme.', [
-		'wp_readme_to_markdown'
+		'wp_readme_to_markdown',
+		'replace:readme_md'
 	] );
 
 	grunt.registerTask( 'Build the plugin.', [
-		'replace',
-		'wp_readme_to_markdown',
+		'Development tasks.',
 		'clean:pre_build',
 		'copy',
 		'compress'
@@ -261,6 +257,11 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'Deploy to WordPres.org.', [
 		'Build the plugin.',
 		'wp_deploy'
+	] );
+
+	grunt.registerTask( 'Generate readme.', [
+		'wp_readme_to_markdown',
+		'replace:readme_md'
 	] );
 
 	grunt.registerTask( 'Replace versions.', [
