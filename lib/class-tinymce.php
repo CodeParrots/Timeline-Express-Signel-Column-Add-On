@@ -32,6 +32,7 @@ final class Timeline_Express_Single_Column_TinyMCE {
 				'classes'   => 'single-column',
 				'label'     => esc_html__( 'Single Column', 'timeline-express-pro' ),
 				'style'     => 'height: 40px;',
+				'tooltip'   => esc_html__( 'Display this timeline in a single column.', 'timeline-express-pro' ),
 			],
 		];
 
