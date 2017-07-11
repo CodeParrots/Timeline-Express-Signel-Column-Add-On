@@ -122,7 +122,7 @@ function initialize_timeline_express_single_column_addon() {
 				'timeline-express-base'
 			];
 
-			// Pro version dependency
+			// Pro version dependency.
 			if ( is_plugin_active( 'timeline-express-pro/timeline-express-pro.php' ) ) {
 
 				$dependencies[] = 'timeline-express-icon-styles';
