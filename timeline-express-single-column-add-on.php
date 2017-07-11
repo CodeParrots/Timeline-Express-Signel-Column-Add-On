@@ -119,7 +119,7 @@ function initialize_timeline_express_single_column_addon() {
 			$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 			// Enqueue custom styles to style the single column timeline
-			wp_enqueue_style( 'timeline-express-single-column-styles', TIMELINE_EXPRESS_SINGLE_COLUMN_URL . "lib/css/timeline-express-single-column{$suffix}.css", array( 'timeline-express-base' ) );
+			wp_enqueue_style( 'timeline-express-single-column-styles', TIMELINE_EXPRESS_SINGLE_COLUMN_URL . "lib/css/timeline-express-single-column{$suffix}.css", array( 'timeline-express-base', 'timeline-express-icon-styles' ) );
 
 			// Enqueue our scripts to add the appropriate class to our parent timeline container
 			wp_enqueue_script( 'timeline-express-single-column-scripts', TIMELINE_EXPRESS_SINGLE_COLUMN_URL . "lib/js/timeline-express-single-column{$suffix}.js", array( 'jquery' ), 'all', true );
