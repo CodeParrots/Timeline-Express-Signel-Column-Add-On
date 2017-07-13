@@ -17,8 +17,8 @@
  * Public facing styles for Single Column Timeline Express Display
  * @since 1.0
  */
-#cd-timeline.single-column::before {
-  left: 0; }
+#cd-timeline.single-column::before, #cd-timeline.single-column.pro::before {
+  left: 0px; }
 
 /** Announcement Containers **/
 .cd-timeline-block.single-column {
@@ -84,10 +84,8 @@
  *
  * @since 2.0.0
  */
-#cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link {
-  left: -30px; }
-  #cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link .cd-timeline-img {
-    left: 0 !important; }
+#cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link .cd-timeline-img {
+  left: 0 !important; }
 
 #cd-timeline.single-column .cd-timeline-block .cd-timeline-img.icon-no-readmore {
   right: auto;
@@ -131,20 +129,22 @@
  * Breakpoint - re-adjust icon containers
  */
 @media only screen and (max-width: 821px) {
-  #cd-timeline.single-column::before {
-    left: -2px; }
   #cd-timeline.single-column .cd-timeline-block.no-icon .cd-timeline-icon-link {
     left: -10px !important; }
   #cd-timeline.single-column .cd-timeline-block.no-icon .cd-timeline-img.icon-no-readmore {
     right: auto;
     left: -10px !important; }
+  #cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link .cd-timeline-img {
+    left: -20px !important; }
   #cd-timeline.single-column .cd-timeline-block .cd-timeline-img.icon-no-readmore {
-    right: auto;
-    left: -27px !important; } }
+    left: -20px; }
+  #cd-timeline.single-column::before {
+    left: 3px; }
+  #cd-timeline.single-column.pro::before {
+    left: -2px; }
+  #cd-timeline.single-column.pro .cd-timeline-block .cd-timeline-img.icon-no-readmore {
+    left: -28px; } }
 
-/**
- * No Icon tweaks
- */
 /*--------------------------------------------------------------
 # Icon Tweaks
 --------------------------------------------------------------*/

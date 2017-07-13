@@ -138,6 +138,9 @@ function initialize_timeline_express_single_column_addon() {
 			// add our 'single-column' class to the timeline
 			add_filter( 'timeline-express-announcement-container-class', array( $this, 'timeline_express_single_column_append_class' ), 11, 2 );
 
+			// add our 'pro'/'free' class to the timeline parent container
+			add_filter( 'timeline_express_container_classes', array( $this, 'timeline_express_single_column_pro_class' ), PHP_INT_MAX );
+
 			/* Contaier style overrides */
 			add_action( 'timeline-express-container-top', array( $this, 'container_style_overrides' ), PHP_INT_MAX );
 
@@ -162,6 +165,25 @@ function initialize_timeline_express_single_column_addon() {
 		public function timeline_express_single_column_append_class( $classes, $post_id ) {
 
 			return $classes . ' single-column';
+
+		}
+
+		/**
+		 * Append 'free'/'pro' classes to Timeline parent container.
+		 *
+		 * @since 1.2.0
+		 *
+		 * @param  array $classes Classes array.
+		 *
+		 * @return array          Final classes array.
+		 */
+		public function timeline_express_single_column_pro_class( $classes ) {
+
+			$pro = is_plugin_active( 'timeline-express-pro/timeline-express-pro.php' );
+
+			$classes[] = $pro ? 'pro' : 'free';
+
+			return $classes;
 
 		}
 

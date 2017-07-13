@@ -2,8 +2,13 @@
  * Public facing styles for Single Column Timeline Express Display
  * @since 1.0
  */
-#cd-timeline.single-column::before {
-	left: 0;
+#cd-timeline.single-column {
+
+	&::before,
+	&.pro::before {
+		left: 0px;
+	}
+
 }
 
 /** Announcement Containers **/
@@ -90,7 +95,6 @@
 
 		// Read more visible.
 		.cd-timeline-icon-link {
-			left: -30px;
 
 			.cd-timeline-img {
 				left: 0 !important;
@@ -184,10 +188,6 @@
 
 	#cd-timeline.single-column {
 
-		&::before {
-			left: -2px;
-		}
-
 		.cd-timeline-block {
 
 			// Icon tweaks.
@@ -203,25 +203,36 @@
 				}
 			}
 
+			.cd-timeline-icon-link {
+
+				.cd-timeline-img {
+					left: -20px !important;
+				}
+			}
+
 			.cd-timeline-img.icon-no-readmore {
-				right: auto;
-				left: -27px !important;
+				left: -20px;
+			}
+
+		}
+
+		&::before {
+			left: 3px;
+		}
+
+		&.pro {
+
+			&::before {
+				left: -2px;
+			}
+
+			.cd-timeline-block {
+
+				.cd-timeline-img.icon-no-readmore {
+					left: -28px;
+				}
 			}
 		}
 	}
 
 }
-
-/**
- * No Icon tweaks
- */
-// .cd-timeline-block.single-column {
-//
-// 	&.no-icon {
-//
-// 		&.icon-square {
-// 			height: 45px;
-// 			width: 45px;
-// 		}
-// 	}
-// }
