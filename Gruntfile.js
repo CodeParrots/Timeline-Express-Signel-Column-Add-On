@@ -133,14 +133,6 @@ module.exports = function(grunt) {
 					to: "Stable tag: <%= pkg.version %>"
 				} ]
 			},
-			readme_md: {
-				src: [ 'README.md' ],
-				overwrite: true,
-				replacements: [ {
-					from: /# (.*?) #/,
-					to: "# <%= pkg.title %> v<%= pkg.version %> #"
-				} ]
-			},
 			charset: {
 				overwrite: true,
 				replacements: [
@@ -217,6 +209,9 @@ module.exports = function(grunt) {
 					// Tag links
 					readme = readme.replace( matches[0], section );
 
+					// Badges
+					readme = readme.replace( '## Description ##', grunt.template.process( pkg.badges.join( ' ' ) ) + "  \r\n\r\n## Description ##" );
+
 					return readme;
 
 				}
@@ -243,8 +238,7 @@ module.exports = function(grunt) {
 		'cssmin',
 		'uglify',
 		'usebanner',
-		'wp_readme_to_markdown',
-		'replace:readme_md'
+		'wp_readme_to_markdown'
 	] );
 
 	grunt.registerTask( 'Build the plugin.', [
@@ -260,8 +254,7 @@ module.exports = function(grunt) {
 	] );
 
 	grunt.registerTask( 'Generate readme.', [
-		'wp_readme_to_markdown',
-		'replace:readme_md'
+		'wp_readme_to_markdown'
 	] );
 
 	grunt.registerTask( 'Replace versions.', [
