@@ -11,8 +11,6 @@ notifications:
     on_success: always
     on_failure: change
     rooms:
-      secure: travis-deploys
-    rooms:
       secure: udkCF6hl4lLrlhXqUq26TuKGKRzT/+q2e3Wg7nvEvlTlrBXFrJU0aJmBM3UehAo3HZRhzhK11nUoZBmndZWKSefCys7Fpe0Km/V2zpa7VDWjUMnx1OMRsTu5C64q4qg2xTUnQqnsmjXYKcZT1jH4HbFEdYtOnu9ajIHZWuNiYtua48lVTC0z15zpn2ZdsnhCmsT7bCxqGmknk9xHXZaZjR4MwkUDosP/TDGmHhrto3tveKmVB76Ax0rzUo0WrlDjZTauS1FRQBxotDwJLwo7eE6XftQKeDIiNM7acGfioGRKij+xoedUSnRxa54Pc/ILE7p+km/dcjYPJMnvE9KaKgVo/yRbsxLVQQht0kw9020KtvJ83ETCGO1tYixHXq8dwpLAi1ajOucfusWgDVa8Yqg82Z7Wefq4yWsArpQxMs1bsqq0aARdvOYx1vukhiGqp3D0jYYaiFJ7lFzKOz7CGEkh1I9jhL2m1/zOkD06Ei8RPi3BYd0W4iyP506qZz2frO5Jxqhsdgj+wCkikxLxVNTLf5wvpVWwGUq4fOS4u8yFFyamfBS9zzM04IVo1SdU3gbBlIAYX1VLyq2hoCs26ai9NkSZVtEH+gkx0N9800D23kvE9sTPGQNwOk0+h/qiFteKXVsQCKg47FN1y8NIZg/q5knL0yQQegzFe9jx5H8=
 
 branches:
