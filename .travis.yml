@@ -6,6 +6,9 @@ notifications:
   email:
     on_success: never
     on_failure: change
+  slack:
+    rooms:
+      secure: gAMR6q8nbEU6QmVt4OTDHYLn3ciCCevUD46uJZehlVMb0D5WwQcJMsa9V/oP5ebZIhXtXrRw0r57MGX/y1vPEABSHS/v0i49gtRajOybmMfqzATa8uFqUIuFDuvMKK6Ys3kmvGp7y0Zn+FeeBfH2II+THp20PbGDsrHxvmgNf3f9II3PRh2BtrtAETBoIyclYaarvI+1ZsykqOhAyYH6F9/+i3lRgZxyM6NWwblG2locLt+dP8592hmwaBoYvnYIKHtM+B231l/JLMbcdWnQbcSLqCOwH6nr1s0jxBEnAcKRgYQKLEh23Hn0m5TA4s4w08tKle3aoWz/5LmeQSF8dd5YWBgVuFemH3aDYiD2JXq7hMFLdtkDf16IAByW5QqvwCV8eCz+3nogEN5AkHQISxAxAkjfC2bGcVnTfo6mkwi+PB7EIngowmpdz3FdmsuImAptB9lpRyV8PEbWgqbWx0C9PXJROjHE+WU0jjnY7wu+4SxwPCEjV60A1sqvQG5wCyJ+5QdwSTagZdBpH/lqr+R8pd58kkgX7uq9+5u2xySWO6dqHZWbOVt50bB+5Y0gQR5I2Zr+al7T4qt5AsxtWofXrxjxgKEuV4pDPUEtqh5v9c93Adli0lQWBpOS/b1o5rd6iRx6lvJRBGu+5KGvSfABt545LqgGV9y6txAfFZw=
 
 branches:
   only:
