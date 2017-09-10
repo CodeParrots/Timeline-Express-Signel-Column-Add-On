@@ -46,7 +46,7 @@ after_script:
 before_deploy:
   - npm install
   # Build the plugin for deployment
-  - grunt build
+  - grunt 'Build the plugin.'
 
 deploy:
   provider: releases
