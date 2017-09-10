@@ -286,7 +286,8 @@ module.exports = function(grunt) {
 	] );
 
 	grunt.registerTask( 'Replace versions.', [
-		'replace'
+		'replace',
+		'wp_readme_to_markdown'
 	] );
 
 };
