@@ -4,7 +4,7 @@
 Plugin Name: Timeline Express - Single Column Add-On
 Plugin URI: https://www.wp-timelineexpress.com
 Description: Defines a new shortcode parameter, single-column="1" (eg: <code>[timeline-express single-column="1"]</code>). The new parameter sets the Timeline Express instance to a single column, similar to the default mobile view.
-Version: 1.0.4
+Version: 1.1.0
 Author: Code Parrots
 Text Domain: timeline-express-single-column-add-on
 Author URI: http://www.codeparrots.com
