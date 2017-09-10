@@ -60,11 +60,6 @@
 }
 
 /** Fix Icon Contianer Alignment **/
-.cd-timeline-block.single-column .cd-timeline-icon-link,
-.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-img {
-	margin-left: 0 !important;
-}
-
 .cd-timeline-block.single-column .cd-timeline-img {
 	left: -2em;
 	margin-left: 0;
@@ -95,9 +90,10 @@
 
 		// Read more visible.
 		.cd-timeline-icon-link {
+			left: 0;
 
 			.cd-timeline-img {
-				left: 0 !important;
+				left: -30px;
 			}
 		}
 
@@ -220,19 +216,20 @@
 			left: 3px;
 		}
 
-		&.pro {
+	}
 
-			&::before {
-				left: -2px;
-			}
+}
 
-			.cd-timeline-block {
+#cd-timeline.single-column.pro {
 
-				.cd-timeline-img.icon-no-readmore {
-					left: -28px;
-				}
+	.cd-timeline-block {
+
+		.cd-timeline-img {
+			left: 0;
+
+			&.icon-no-readmore {
+				left: -30px;
 			}
 		}
 	}
-
 }

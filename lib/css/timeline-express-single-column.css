@@ -62,10 +62,6 @@
   border-left-color: transparent; }
 
 /** Fix Icon Contianer Alignment **/
-.cd-timeline-block.single-column .cd-timeline-icon-link,
-.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-img {
-  margin-left: 0 !important; }
-
 .cd-timeline-block.single-column .cd-timeline-img {
   left: -2em;
   margin-left: 0; }
@@ -85,8 +81,10 @@
  *
  * @since 2.0.0
  */
-#cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link .cd-timeline-img {
-  left: 0 !important; }
+#cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link {
+  left: 0; }
+  #cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link .cd-timeline-img {
+    left: -30px; }
 
 #cd-timeline.single-column .cd-timeline-block .cd-timeline-img.icon-no-readmore {
   right: auto;
@@ -140,11 +138,12 @@
   #cd-timeline.single-column .cd-timeline-block .cd-timeline-img.icon-no-readmore {
     left: -20px; }
   #cd-timeline.single-column::before {
-    left: 3px; }
-  #cd-timeline.single-column.pro::before {
-    left: -2px; }
+    left: 3px; } }
+
+#cd-timeline.single-column.pro .cd-timeline-block .cd-timeline-img {
+  left: 0; }
   #cd-timeline.single-column.pro .cd-timeline-block .cd-timeline-img.icon-no-readmore {
-    left: -28px; } }
+    left: -30px; }
 
 /*--------------------------------------------------------------
 # Icon Tweaks
