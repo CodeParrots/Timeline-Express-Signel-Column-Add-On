@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 * Timeline Express - Single Column Add-On
 * @author Code Parrots <support@codeparrots.com>
@@ -38,7 +39,7 @@
 /** Icon Contianer */
 .cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-icon-link,
 .cd-timeline-block.single-column.timeline-announcement-right .cd-timeline-icon-link {
-  left: 0; }
+  left: -30px; }
 
 /** Icon Link Container **/
 .cd-timeline-block.single-column .cd-timeline-icon-link {

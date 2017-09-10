@@ -4,7 +4,7 @@
 Plugin Name: Timeline Express - Single Column Add-On
 Plugin URI: https://www.wp-timelineexpress.com
 Description: Defines a new shortcode parameter, single-column="1" (eg: <code>[timeline-express single-column="1"]</code>). The new parameter sets the Timeline Express instance to a single column, similar to the default mobile view.
-Version: 1.1.0
+Version: 1.0.4
 Author: Code Parrots
 Text Domain: timeline-express-single-column-add-on
 Author URI: http://www.codeparrots.com
@@ -58,7 +58,7 @@ if ( ! defined( 'TIMELINE_EXPRESS_SINGLE_COLUMN_URL' ) ) {
 }
 
 /**
-*	Admin notice when the base plugin is not installed.
+* Admin notice when the base plugin is not installed.
 */
 function timeline_express_single_column_addon_display_activation_notice_error() {
 	?>
@@ -70,8 +70,8 @@ function timeline_express_single_column_addon_display_activation_notice_error() 
 		</style>
 		<!-- display our error message -->
 		<div class="error">
-			<p><?php printf( esc_attr__( '%s could not be activated because Timeline Express is not installed and active.', 'timeline-express-single-column-add-on' ), '<strong>Timeline Express Single Column Add-on</strong>' ); ?></p>
-			<p><?php printf( esc_attr__( 'Please install and activate %s before activating this addon.', 'timeline-express-single-column-add-on' ) , '<a href="' . esc_url_raw( admin_url( 'plugin-install.php?tab=search&type=term&s=Timeline+Express+Evan+Herman' ) ) . '" title="Timeline Express">Timeline Express</a>' ); ?></p>
+			<p><?php printf( /* translators: Name of the add-on. */ esc_attr__( '%s could not be activated because Timeline Express is not installed and active.', 'timeline-express-single-column-add-on' ), '<strong>Timeline Express Single Column Add-on</strong>' ); ?></p>
+			<p><?php printf( /* translators: Timeline Express wrapped in anchor tags. */  esc_attr__( 'Please install and activate %s before activating this addon.', 'timeline-express-single-column-add-on' ) , '<a href="' . esc_url_raw( admin_url( 'plugin-install.php?tab=search&type=term&s=Timeline+Express+Evan+Herman' ) ) . '" title="Timeline Express">Timeline Express</a>' ); ?></p>
 		</div>
 	<?php
 }
@@ -105,8 +105,8 @@ function initialize_timeline_express_single_column_addon() {
 		}
 
 		/**
-		*	Enable/assign a 'limit' attribute on our shortcode
-		*	@since 1.0
+		* Enable/assign a 'limit' attribute on our shortcode
+		* @since 1.0
 		*/
 		public function add_new_timeline_express_single_column_shortcode_attribute( $output, $pairs, $atts, $shortcode ) {
 
@@ -119,7 +119,7 @@ function initialize_timeline_express_single_column_addon() {
 			$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 			$dependencies = [
-				'timeline-express-base'
+				'timeline-express-base',
 			];
 
 			// Pro version dependency.
