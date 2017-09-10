@@ -110,6 +110,13 @@ module.exports = function(grunt) {
 					event: [ 'all' ]
 				},
 			},
+			images: {
+				files: [
+					'assets/images/**/*.{gif,jpeg,jpg,png,svg}',
+					'wp-org-assets/**/*.{gif,jpeg,jpg,png,svg}'
+				],
+				tasks: [ 'imagemin' ]
+			},
 			sass: {
 				files: '.dev/sass/**/*.scss',
 				tasks: [ 'sass', 'autoprefixer', 'cssmin' ]
@@ -183,12 +190,25 @@ module.exports = function(grunt) {
 		wp_deploy: {
 			deploy: {
 				options: {
+					assets_dir: 'wp-org-assets/',
 					plugin_slug: '<%= pkg.name %>',
 					build_dir: 'build/<%= pkg.name %>/',
 					deploy_trunk: true,
 					deploy_tag: pkg.version,
 					max_buffer: 1024*1024*10
 				}
+			}
+		},
+
+		imagemin: {
+			options: {
+				optimizationLevel: 3
+			},
+			wp_org_assets: {
+				expand: true,
+				cwd: 'wp-org-assets/',
+				src: [ '**/*.{gif,jpeg,jpg,png,svg}' ],
+				dest: 'wp-org-assets/'
 			}
 		},
 
@@ -203,6 +223,13 @@ module.exports = function(grunt) {
 					for ( var i = 0; i < tags.length; i++ ) {
 
 						section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
+
+					}
+
+					// Banner
+					if ( grunt.file.exists( 'wp-org-assets/banner-772x250.jpg' ) ) {
+
+						readme = readme.replace( '**Contributors:**', "![Banner Image](wp-org-assets/banner-772x250.jpg)\r\n\r\n**Contributors:**" );
 
 					}
 
@@ -238,6 +265,7 @@ module.exports = function(grunt) {
 		'cssmin',
 		'uglify',
 		'usebanner',
+		'imagemin',
 		'wp_readme_to_markdown'
 	] );
 
