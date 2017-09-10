@@ -1,0 +1,65 @@
+sudo: false
+
+language: php
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+  slack:
+    secure: R422G0ixmDO9a93rKCKvJUtA0xSvCJOUNl457GDcmMOLddcDibfqs3JHTHGYr92slOMdrMRl5ZVrpuH8h2KawOwvXKWyaz/Kw6gzpyVHpDXmF9JGJ24Q+a88WUAZznHZwq3Aou2v5kP9hMXI0h8cqgQaqvII1wWtRAtEcXrdia6OEF5ohEpi0kzhN9r/YsDMl5mr1SCg5kdkv5Nnghy+eppQpC41tLLiggFhMtiwFjXSnSgq6aj5V+1w+aQm59e9dUQvGlfMNQVuC51vCM1Mwx2kpgo61GqZPYC9AULC9bxZEdBb7ufbWFkGa8fU45XU/KKtk7dCv9NY4h/EyuxWd2Vkje+NIgMegxv68TJFPxurOeW1S95oEw23GwgL5/KEQgybVT2QcOZPCgs5rr0/59RK202eMHMMa7QkPLaJBPY+ifCW2dSY3nsvKGYkKuSQfff0pNs/amgXjVBrgABS3/+lk/Xh31TRUU2ljtH/BrqxUeWh3Ef1+RDMrzRt7pn9pIF3cEaM/8sYqc0ge3k/apnSzXv56u0XpAj+f/g+LluX++JhVJdnl0I+H29yBD83NXJ9jBxrztCujZc5U6+GQufC9vCzPuO4zW6oboKjjQToJ1rhUiYNlg1KaZL7eG4VS7K1ok6kjXzRKvLCBRXNYfvodZwoioWk554Kn4RXPno=
+
+branches:
+  only:
+    - /^v\d.*$/
+    - master
+    - develop
+
+php:
+  - 5.6
+  - 7.1
+
+env:
+  - WP_VERSION=4.4 WP_MULTISITE=0
+  - WP_VERSION=latest WP_MULTISITE=0
+  - WP_VERSION=trunk WP_MULTISITE=0
+
+matrix:
+  fast_finish: true
+  exclude:
+    - php: 7.1
+      env: WP_VERSION=4.4 WP_MULTISITE=0
+
+install:
+  - export DEV_LIB_PATH=bin/dev-lib
+  - export DEV_LIB_SKIP=codeception,jscs,jshint,yuicompressor,phpunit,xmllint
+  - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
+  - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
+  - source $DEV_LIB_PATH/travis.install.sh
+
+script:
+  - source $DEV_LIB_PATH/travis.script.sh
+
+after_script:
+  - source $DEV_LIB_PATH/travis.after_script.sh
+
+before_deploy:
+  - npm install
+  # Regenerate our documentation to include any new actions/filters
+  - grunt docs
+  # Build the plugin for deployment
+  - grunt build
+
+deploy:
+  provider: releases
+  api_key:
+    secure: tri05kis6yFjI4Cwh5Y36JDoPkX9GsnvGbFwpBs5LXHCRod2x23IqqkavcM4zvDR5Hp/GXiRqTh5hi/GpsqLaBmBcoFf8LzfN8Wt4xIMU2fxch0KNTtKSH9tcb7uuzUzFn/L4348CnrZ9aRIVYUwXVra6sRCX4P5rkVysLxVu7SoEtxbA82ZHstF3M68k3AwPu2pEg0khrCtuy1OI32y6yiravelfoCKfFY6tbjSsJ4oywIuFau+yaYqyBTep6IjTmccKQ+9uPKLHrFItT138mTIfG3mc6R3BYPmxrWkKxWphM7iB6tOppRUi7azsN0CxKNvhmlIR4HRRm8uqp0RJGOOXURlGNyAMNy/Qh14JIFrfxIQde4b/QjKVgnbOyhCRphhGIc1qHf4r5+gjzWkkm999XadVmCNYVAft+pX52KtBVGCSkg+QkjTWmQon2UUuL3h6XVSW41/FwMCQK4oSRtIjmekUAIpzP1icTbfknsnj1AW/s9HkngCsBLkGtRynxcLNzyokQsZjkDm0g8vd7OW9RdeXzKZiBVVKymHumJkMu6AMbBefurf1fu5iaxfymqwPu5JrffIJrLvSncyomSIl5+X9qMZFtG1Eeob7CtPi8crUgFVgbBEV/lYsXQa24AaWFk49P/N2WCMxOVeHwf5OyVEnnG5TgN6onFQR+A=
+  file_glob: true
+  file: timeline-express-single-column-add-on-*.zip
+  on:
+    tags: true
+    repo: CodeParrots/timeline-express-single-column-add-on
+    php: '7.1'
+    condition: "$WP_VERSION=trunk"
+  skip_cleanup: true
+  overwrite: true

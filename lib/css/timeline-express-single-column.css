@@ -1,80 +1,157 @@
+/*--------------------------------------------------------------
+* Timeline Express - Single Column Add-On
+* @author Code Parrots <support@codeparrots.com>
+* Copyright © 2017 Code Parrots. All Rights Reserved.
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Single Column
+# Icon Tweaks
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Single Column
+--------------------------------------------------------------*/
 /**
  * Public facing styles for Single Column Timeline Express Display
  * @since 1.0
  */
-#cd-timeline.single-column::before {
-	left: 0;
-}
+#cd-timeline.single-column::before, #cd-timeline.single-column.pro::before {
+  left: 0px; }
 
 /** Announcement Containers **/
 .cd-timeline-block.single-column {
-	width: 100%;
-	margin-bottom: 1em;
-}
+  width: 100%;
+  margin-bottom: 1em; }
 
 /** 2nd Announcement Container **/
 .cd-timeline-block.single-column:nth-child(2) {
-	margin-top: 1em !important;
-}
+  margin-top: 1em !important; }
 
 .timeline-express.single-column .cd-timeline-block:nth-child(1) {
-	margin-top: 0;
-}
+  margin-top: 0; }
 
 .timeline-express.single-column .cd-timeline-block {
-	margin: 1em 0;
-}
+  margin: 1em 0; }
 
 /** Icon Contianer */
 .cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-icon-link,
 .cd-timeline-block.single-column.timeline-announcement-right .cd-timeline-icon-link {
-	left: 0;
-}
+  left: -30px; }
 
 /** Icon Link Container **/
 .cd-timeline-block.single-column .cd-timeline-icon-link {
-	box-shadow: none !important;
-}
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
 
 /** Announcement Content Container **/
 .cd-timeline-block.single-column .cd-timeline-content {
-	width: 89%;
-	margin-left: 11%;
-	float: none;
-}
+  width: 89%;
+  margin-left: 11%;
+  float: none; }
 
 /** Announcement Content Container - Arrow which points at the icon **/
 .cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-content::before {
-	border-left-color: transparent;
-}
+  border-left-color: transparent; }
 
 /** Announcement Content Container - Arrow which points at the icon **/
 .cd-timeline-block.single-column .cd-timeline-content::before {
-	left: auto;
-	border-left-color: transparent;
-}
+  left: auto;
+  border-left-color: transparent; }
 
 /** Fix Icon Contianer Alignment **/
-.cd-timeline-block.single-column .cd-timeline-icon-link,
-.cd-timeline-block.single-column.timeline-announcement-left .cd-timeline-img {
-	margin-left: 0 !important;
-}
-
 .cd-timeline-block.single-column .cd-timeline-img {
-	left: -2em;
-	margin-left: 0;
-}
-
-/**
- * New Layout Styles
- */
-.cd-timeline-block.single-column .cd-timeline-title-container + .announcement-banner-image {
-	display:none
-}
+  left: -2em;
+  margin-left: 0; }
 
 .cd-timeline-block.single-column .the-excerpt .announcement-banner-image {
-	float: left;
-	margin-right: 10px;
-	margin-top: 5px;
-}
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRpbWVsaW5lLWV4cHJlc3Mtc2luZ2xlLWNvbHVtbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7OztHQUdHO0FBQ0g7Q0FDQyxRQUFBO0NBQ0E7O0FBRUQsK0JBQUE7QUFDQTtDQUNDLFlBQUE7Q0FDQSxtQkFBbUI7Q0FDcEI7O0FBRUEsa0NBQWtDO0FBQ2xDO0NBQ0MsMkJBQUE7Q0FDQTs7QUFFRDtDQUNBLGNBQUE7Q0FDQzs7QUFFRDtDQUNDLGNBQWM7Q0FDZjs7QUFFQSxxQkFBQztBQUNEOztDQUVBLFFBQUE7Q0FDQTs7QUFFQSwyQkFBQztBQUNEO0NBQ0EsNEJBQUE7Q0FDQTs7QUFFQSxzQ0FBQztBQUNEO0NBQ0EsV0FBQTtDQUNBLGlCQUFBO0NBQ0MsWUFBWTtDQUNiOztBQUVBLHVFQUFnQztBQUNoQztDQUNDLCtCQUErQjtDQUNoQzs7QUFFQSx1RUFBUztBQUNUO0NBQ0MsV0FBQTtDQUNBLCtCQUErQjtDQUNoQzs7QUFFQSxvQ0FBb0M7QUFDcEM7O0NBRUMsMEJBQUE7Q0FDQSxRQUFRO0NBQ1Q7O0FBRUE7Q0FDQyxXQUFBO0NBQ0EsZUFBZTtDQUNoQjs7QUFFQTs7R0FFQTtBQUNBO0NBQ0MsWUFBRTtDQUNIOztBQUVBO0NBQ0MsWUFBWTtDQUNiLG1CQUFBO0NBQ0MsZ0JBQVk7Q0FDWiIsImZpbGUiOiJ0aW1lbGluZS1leHByZXNzLXNpbmdsZS1jb2x1bW4uY3NzIn0= */
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px; }
+
+@media only screen and (max-width: 550px) {
+  .cd-timeline-block.single-column .cd-timeline-content {
+    width: 85%;
+    margin-left: 15%; } }
+
+/**
+ * Icon Tweaks
+ *
+ * @since 2.0.0
+ */
+#cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link {
+  left: 0; }
+  #cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link .cd-timeline-img {
+    left: -30px; }
+
+#cd-timeline.single-column .cd-timeline-block .cd-timeline-img.icon-no-readmore {
+  right: auto;
+  left: -30px; }
+
+#cd-timeline.single-column .cd-timeline-block.no-icon .cd-timeline-icon-link {
+  left: -10px;
+  top: 20px; }
+  #cd-timeline.single-column .cd-timeline-block.no-icon .cd-timeline-icon-link .cd-timeline-img {
+    top: 0; }
+
+#cd-timeline.single-column .cd-timeline-block.no-icon .cd-timeline-img.icon-no-readmore {
+  right: auto;
+  left: -10px; }
+
+#cd-timeline.single-column .cd-timeline-block.icon-square.timeline-announcement-left.no-icon .cd-timeline-icon-link, #cd-timeline.single-column .cd-timeline-block.icon-square.timeline-announcement-right.no-icon .cd-timeline-icon-link {
+  left: -10px; }
+
+#cd-timeline.single-column .cd-timeline-block.icon-square.timeline-announcement-left .cd-timeline-icon-link, #cd-timeline.single-column .cd-timeline-block.icon-square.timeline-announcement-right .cd-timeline-icon-link {
+  left: -25px; }
+
+#cd-timeline.single-column .cd-timeline-block.icon-square.timeline-announcement-left .cd-timeline-img.icon-no-readmore, #cd-timeline.single-column .cd-timeline-block.icon-square.timeline-announcement-right .cd-timeline-img.icon-no-readmore {
+  left: -25px !important;
+  right: auto !important; }
+
+#cd-timeline.single-column .cd-timeline-block.icon-small-dot .cd-timeline-icon-link,
+#cd-timeline.single-column .cd-timeline-block.icon-small-dot .cd-timeline-img.icon-no-readmore {
+  left: -10px !important;
+  right: auto; }
+
+#cd-timeline.single-column .cd-timeline-block.icon-rotated-square .cd-timeline-icon-link {
+  left: -23px; }
+
+#cd-timeline.single-column .cd-timeline-block.icon-rotated-square .cd-timeline-img.icon-no-readmore {
+  left: -23px !important; }
+
+#cd-timeline.single-column .cd-timeline-block.icon-square.no-icon .cd-timeline-img.icon-no-readmore {
+  left: -10px !important; }
+
+/**
+ * Breakpoint - re-adjust icon containers
+ */
+@media only screen and (max-width: 821px) {
+  #cd-timeline.single-column .cd-timeline-block.no-icon .cd-timeline-icon-link {
+    left: -10px !important; }
+  #cd-timeline.single-column .cd-timeline-block.no-icon .cd-timeline-img.icon-no-readmore {
+    right: auto;
+    left: -10px !important; }
+  #cd-timeline.single-column .cd-timeline-block .cd-timeline-icon-link .cd-timeline-img {
+    left: -20px !important; }
+  #cd-timeline.single-column .cd-timeline-block .cd-timeline-img.icon-no-readmore {
+    left: -20px; }
+  #cd-timeline.single-column::before {
+    left: 3px; } }
+
+#cd-timeline.single-column.pro .cd-timeline-block .cd-timeline-img {
+  left: 0; }
+  #cd-timeline.single-column.pro .cd-timeline-block .cd-timeline-img.icon-no-readmore {
+    left: -30px; }
+
+/*--------------------------------------------------------------
+# Icon Tweaks
+--------------------------------------------------------------*/
+#cd-timeline.single-column .icon-rotated-square .cd-timeline-img {
+  left: -23px; }
+
+#cd-timeline.single-column .icon-small-dot .cd-timeline-img {
+  left: -13px; }
+
+#cd-timeline.single-column .icon-square .cd-timeline-img {
+  left: -25px !important; }

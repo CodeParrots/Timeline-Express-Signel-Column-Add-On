@@ -1,25 +1,44 @@
 {
-  "name": "Timeline-Express-Single-Column-Add-on",
-	"title": "Timeline Express Single Column Add-on",
+  "name": "timeline-express-single-column-add-on",
+  "title": "Timeline Express - Single Column Add-On",
   "version": "1.0.4",
   "description": "Define new shortcode parameter, and limit timelines to a single column.",
   "main": "index.js",
+  "repository": "CodeParrots/timeline-express-single-column-add-on",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "version": "grunt version && git add -A .",
+    "postversion": "git push && git push --tags"
   },
+  "badges": [
+    "[![Build Status](https://travis-ci.org/<%= pkg.repository %>.svg?branch=master)](https://travis-ci.org/<%= pkg.repository %>)",
+    "[![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/<%= pkg.repository %>/blob/master/license.txt)",
+    "[![PHP 5.6](https://img.shields.io/badge/php-<% print(encodeURI(5.6)) %>-8892bf.svg)](https://secure.php.net/supported-versions.php)",
+    "[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/<%= pkg.name %>.svg)](https://wordpress.org/plugins/<%= pkg.name %>/)",
+    "[![WordPress](https://img.shields.io/wordpress/v/<%= pkg.name %>.svg)](https://img.shields.io/wordpress/v/<%= pkg.name %>.svg)",
+    "[![WordPress](https://img.shields.io/wordpress/plugin/dt/<%= pkg.name %>.svg)](https://wordpress.org/plugins/<%= pkg.name %>/)"
+  ],
   "author": "Code Parrots",
-	"site": "http://www.wp-timelineexpress.com",
+  "site": "http://www.wp-timelineexpress.com",
   "license": "GPLv2",
-  "dependencies": {
-    "grunt": "^0.4.5"
-  },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
+    "grunt": "^0.4.5",
     "grunt-auto-install": "^0.2.4",
+    "grunt-autoprefixer": "^3.0.4",
     "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-postcss": "^0.5.0"
+    "grunt-postcss": "^0.5.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-text-replace": "^0.4.0",
+    "matchdep": "^1.0.1",
+    "grunt-wp-deploy": "^1.2.1",
+    "grunt-menu": "^1.0.2",
+    "grunt-wp-readme-to-markdown": "^2.0.1"
   }
 }

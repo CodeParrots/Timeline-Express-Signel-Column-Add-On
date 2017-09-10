@@ -1,31 +1,53 @@
-# Timeline Express - Single Column Add-On v1.0.4
+# Timeline Express - Single Column Add-On #
+![Banner Image](wp-org-assets/banner-772x250.jpg)
 
-**Tags:**              timeline, express, addon, add, on, single, column, shortcode, parameter, time, line, timeline express <br />
-**Requires at least:** WordPress v4.2 <br />
-**Tested up to:**      WordPress v4.7 <br />
-**Stable tag:**        1.0.4 <br />
-**License:**           GPLv2 or later <br />
-**License URI:**       [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+**Contributors:** [eherman24](https://profiles.wordpress.org/eherman24), [codeparrots](https://profiles.wordpress.org/codeparrots)  
+**Tags:** [timeline](https://wordpress.org/themes/tags/timeline/), [express](https://wordpress.org/themes/tags/express/), [addon](https://wordpress.org/themes/tags/addon/), [single](https://wordpress.org/themes/tags/single/), [column](https://wordpress.org/themes/tags/column/), [shortcode](https://wordpress.org/themes/tags/shortcode/), [parameter](https://wordpress.org/themes/tags/parameter/)  
+**Plugin URI:** https://www.wp-timelineexpress.com  
+**Requires at least:** WP 4.0 & Timeline Express 1.2.8.1  
+**Requires PHP:** 5.6  
+**Tested up to:** 4.8.1  
+**Stable tag:** 1.0.4  
+**License:** GPLv2 or later  
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/timeline-express-single-column-add-on.svg?style=flat-square)](https://wordpress.org/plugins/timeline-express-single-column-add-on/)
-[![WordPress](https://img.shields.io/wordpress/v/timeline-express-single-column-add-on.svg?style=flat-square)](https://wordpress.org/plugins/timeline-express-single-column-add-on/)
-[![WordPress](https://img.shields.io/wordpress/plugin/dt/timeline-express-single-column-add-on.svg?style=flat-square)](https://wordpress.org/plugins/timeline-express-single-column-add-on/)
-[![WordPress rating](https://img.shields.io/wordpress/plugin/r/timeline-express-single-column-add-on.svg?style=flat-square)](https://wordpress.org/support/plugin/timeline-express-single-column-add-on)
+Enable a 'single-column' parameter in Timeline Express to display timelines in a single column.
 
-## Requirements
+[![Build Status](https://travis-ci.org/CodeParrots/timeline-express-single-column-add-on.svg?branch=master)](https://travis-ci.org/CodeParrots/timeline-express-single-column-add-on) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/CodeParrots/timeline-express-single-column-add-on/blob/master/license.txt) [![PHP 5.6](https://img.shields.io/badge/php-5.6-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/timeline-express-single-column-add-on.svg)](https://wordpress.org/plugins/timeline-express-single-column-add-on/) [![WordPress](https://img.shields.io/wordpress/v/timeline-express-single-column-add-on.svg)](https://img.shields.io/wordpress/v/timeline-express-single-column-add-on.svg) [![WordPress](https://img.shields.io/wordpress/plugin/dt/timeline-express-single-column-add-on.svg)](https://wordpress.org/plugins/timeline-express-single-column-add-on/)  
 
-- WordPress v4.2 or later
-- [Timeline Express](https://wordpress.org/plugins/timeline-express/)
+## Description ##
 
-## Description
-
-[Timeline Express - Single Column Add-On](https://wordpress.org/plugins/timeline-express-single-column-add-on/) extends Timeline Express, and enables a new shortcode parameter `single-column`.
+Timeline Express - Single Column Add-On extends Timeline Express, and enables a new shortcode parameter `single-column`.
 
 When set to 1 (eg: `[timeline-express single-column="1"]`), the timeline will display in a single column - similar to the default Timeline Express mobile view.
 
-## Basic Usage
+**Basic Usage**
 
 If you want to set a timeline to single column you can add the 'single-column' parameter to the `[timeline-express]` shortcode and set it to `1`.
 
-*Example*
+**Example**
 `[timeline-express single-column="1"]`
+
+## Changelog ##
+
+### 1.1.0 - September 10th, 2017 ###
+* Updates to the styles for Timeline Express Pro v2 compatibility.
+* Updates to the shortcode generator fields.
+* Updates to the automation tasks.
+* Reverted container styles back to the original, to maintain consistency.
+* Tweak icon styles for free/pro compatibility.
+
+### 1.0.4 - October 20th, 2016 ###
+* Tweak front end styles.
+
+### 1.0.3 - September 16th, 2016 ###
+* Re-factored the base plugin check.
+* Bump 'Tested up to' version.
+
+### 1.0.2 - August 10th, 2016 ###
+* Tweak responsive styles, prevented overflow of containers outside parent div.
+
+### 1.0.1 - June 19th, 2016 ###
+* Tweak styles to work with free version as well as pro version of Timeline Express.
+
+### 1.0 - June 17th, 2016 ###
+* Initial release of the single column add-on for Timeline Express.
