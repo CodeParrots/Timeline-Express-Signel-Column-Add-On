@@ -1,12 +1,12 @@
 {
   "name": "timeline-express-single-column-add-on",
   "title": "Timeline Express - Single Column Add-On",
-  "version": "1.1.0",
+  "version": "1.0.4",
   "description": "Define new shortcode parameter, and limit timelines to a single column.",
   "main": "index.js",
   "repository": "CodeParrots/timeline-express-single-column-add-on",
   "scripts": {
-    "version": "grunt 'Replace versions.' && git add -A .",
+    "version": "grunt 'Development tasks.' && git add -A .",
     "postversion": "git push && git push --tags"
   },
   "badges": [
