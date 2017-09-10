@@ -5,7 +5,7 @@ Plugin URI: https://www.wp-timelineexpress.com
 Requires at least: WP 4.0 & Timeline Express 1.2.8.1
 Requires PHP: 5.6
 Tested up to: 4.8.1
-Stable tag: 1.1.0
+Stable tag: 1.0.4
 License: GPLv2 or later
 
 Enable a 'single-column' parameter in Timeline Express to display timelines in a single column.
