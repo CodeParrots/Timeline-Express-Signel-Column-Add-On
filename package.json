@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": "CodeParrots/timeline-express-single-column-add-on",
   "scripts": {
-    "version": "grunt replace && git add -A .",
+    "version": "grunt 'Replace versions.' && git add -A .",
     "postversion": "git push && git push --tags"
   },
   "badges": [
