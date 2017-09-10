@@ -45,8 +45,6 @@ after_script:
 
 before_deploy:
   - npm install
-  # Regenerate our documentation to include any new actions/filters
-  - grunt docs
   # Build the plugin for deployment
   - grunt build
 
