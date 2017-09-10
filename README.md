@@ -2,7 +2,7 @@
 ![Banner Image](wp-org-assets/banner-772x250.jpg)
 
 **Contributors:** [eherman24](https://profiles.wordpress.org/eherman24), [codeparrots](https://profiles.wordpress.org/codeparrots)  
-**Tags:** [[time](https://wordpress.org/themes/tags/time/)[line](https://wordpress.org/themes/tags/line/)](https://wordpress.org/themes/tags/timeline/), [express](https://wordpress.org/themes/tags/express/), [[add](https://wordpress.org/themes/tags/add/)[on](https://wordpress.org/themes/tags/on/)](https://wordpress.org/themes/tags/addon/), add, on, [single](https://wordpress.org/themes/tags/single/), [column](https://wordpress.org/themes/tags/column/), [shortcode](https://wordpress.org/themes/tags/shortcode/), [parameter](https://wordpress.org/themes/tags/parameter/), time, line  
+**Tags:** [timeline](https://wordpress.org/themes/tags/timeline/), [express](https://wordpress.org/themes/tags/express/), [addon](https://wordpress.org/themes/tags/addon/), [single](https://wordpress.org/themes/tags/single/), [column](https://wordpress.org/themes/tags/column/), [shortcode](https://wordpress.org/themes/tags/shortcode/), [parameter](https://wordpress.org/themes/tags/parameter/)  
 **Plugin URI:** https://www.wp-timelineexpress.com  
 **Requires at least:** WP 4.0 & Timeline Express 1.2.8.1  
 **Requires PHP:** 5.6  
